@@ -1,13 +1,17 @@
 package com.example.astroweather;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 import java.util.UUID;
 
 import com.astrocalculator.AstroCalculator;
 import com.astrocalculator.AstroCalculator.SunInfo;
 import com.astrocalculator.AstroCalculator.MoonInfo;
 import com.astrocalculator.AstroDateTime;
+
+import static com.example.astroweather.MainActivity.timeNow;
 
 public class InfoSet {
 
@@ -22,11 +26,17 @@ public class InfoSet {
 
         return sTasksSet;
     }
+    Date dt =timeNow;
+    Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("Europe/Paris"));
 
-    AstroDateTime dateTime = new AstroDateTime();
+    int year = cal.get(Calendar.YEAR);
+    int month = cal.get(Calendar.MONTH);
+    int day = cal.get(Calendar.DAY_OF_MONTH);
+
+    AstroDateTime dateTime = new AstroDateTime(2019,1,1,1,1,1,2,false);
     AstroCalculator.Location location = new AstroCalculator.Location(57,26);
     AstroCalculator astro = new AstroCalculator(dateTime,location);
-   // MoonInfo moon= new MoonInfo(astro,1,1,1,1,1,1,1);
+    //MoonInfo moon= new MoonInfo(astro);
    // double x =  moon.getAge();
 
     private InfoSet() {
