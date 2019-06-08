@@ -1,10 +1,14 @@
 package com.example.astroweather;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -14,67 +18,32 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FragmentPagerAdapter adapterViewPager;
-    TextView dateTime;
-    public static Date timeNow;
-    //Thread tMyLoc;
+            Button start;
+            Button settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.act);
 
-        timeNow = Calendar.getInstance().getTime();
-        dateTime.setText("Czas: "+timeNow.toString());
+        start = findViewById(R.id.start);
+        settings = findViewById(R.id.settings);
 
-        Thread tMyLoc=new Thread(){
-            @Override public void run(){
-                try {
-                    while(!isInterrupted()){
-                        Thread.sleep(1000); //1000ms = 1 sec
-                        runOnUiThread(new Runnable() {
-                            @Override public void run() {
+        start.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                    startActivity(new Intent(getApplicationContext(), AstroActivity.class));
 
-                                timeNow = Calendar.getInstance().getTime();
-                                dateTime.setText("Czas: "+timeNow.toString());
-                                // getFriendLocation();
+        }});
 
-                            } }); } }catch (InterruptedException e) {} } };
-        tMyLoc.start();
+        settings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
 
+            }});
 
-
-        InfoSet tasksSet = InfoSet.get();
-        ArrayList<Info> lista_tasks = tasksSet.getZadania();
-
-        ViewPager vPager = findViewById(R.id.vp);
-
-        adapterViewPager = new CustomAdapter(getSupportFragmentManager(), lista_tasks);
-
-        vPager.setAdapter(adapterViewPager);
-
-        dateTime = findViewById(R.id.maintime);
-        timeNow = Calendar.getInstance().getTime();
-        // dateTime.append(timeNow.toString());
-
-
-//            Thread t = new Thread();
-//            try {
-//                t.sleep(1000);
-//                // progressDialog.hide();
-//                try {
-//                    timeNow = Calendar.getInstance().getTime();
-//                    dateTime.append(timeNow.toString());
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//                t.interrupt();
-//            } catch (InterruptedException e) { }
-
-
-
-
-        }
-
+    }
 }
+
+
+
 
