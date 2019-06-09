@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="#fff"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="25sp"
         android:textSize="35dp"
         android:text="Astro Wedel" />
 
@@ -24,7 +24,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="90sp"
         android:textSize="22dp"
         android:text="Start app" />
 
@@ -35,7 +35,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="180sp"
         android:textSize="22dp"
         android:text="settings" />
 
