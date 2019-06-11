@@ -1,11 +1,16 @@
 package com.example.astroweather;
 
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.TelephonyManager;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.widget.TextView;
 
 
@@ -28,19 +33,29 @@ public class AstroActivity extends AppCompatActivity {
     public static boolean timesUp;
 
     InfoSet tasksSet;
+    Thread tMyLoc;
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
 
         outState.putInt("counter", counter);
         outState.putBoolean("timeup", timesUp);
+      //  outState.putParcelable("frd",tMyLoc);
         super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+
+        if(IsTablet()){
+            setContentView(R.layout.actitity_main_tablet);
+        }
+        else {
+            setContentView(R.layout.activity_main);
+        }
+
         dateTime = findViewById(R.id.maintime);
         pos = findViewById(R.id.pos);
         pos.setText("Wsp. geograficzne: "+SettingsActivity.latitudeValue+" , "+SettingsActivity.longtitudeValue);
@@ -64,11 +79,11 @@ public class AstroActivity extends AppCompatActivity {
         tasksSet = InfoSet.get();
 
         if(savedInstanceState !=null){
-            counter =savedInstanceState.getInt("counter");
-            timesUp = savedInstanceState.getBoolean("timeup");
+          //  counter =savedInstanceState.getInt("counter");
+            //timesUp = savedInstanceState.getBoolean("timeup");
         }
 
-        Thread tMyLoc=new Thread(){
+        tMyLoc=new Thread(){
             @Override public void run(){
                 try {
                     while(!isInterrupted()){
@@ -134,6 +149,22 @@ public class AstroActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public static boolean IsTablet()
+    {
+        DisplayMetrics metrics = new DisplayMetrics();
+        //getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+        float yInches= metrics.heightPixels/metrics.ydpi;
+        float xInches= metrics.widthPixels/metrics.xdpi;
+        double diagonalInches = Math.sqrt(xInches*xInches + yInches*yInches);
+        if (diagonalInches>=6.5){
+            return true;
+        }else{
+            // smaller device
+            return false;
+        }
     }
 
 }

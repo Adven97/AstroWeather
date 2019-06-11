@@ -39,7 +39,7 @@ public class InfoSet {
     //Date dt =timeNow;
 
 
-    private InfoSet(double longti, double lat, Calendar cal) {
+    private InfoSet(double lat, double longti, Calendar cal) {
 
 
 
@@ -65,9 +65,7 @@ public class InfoSet {
 
             if(i==1){
                 getSunInfo(info,astro);
-
             }
-
             mTasks.add(info);
         }
     }

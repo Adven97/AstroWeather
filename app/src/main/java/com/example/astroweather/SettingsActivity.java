@@ -46,7 +46,6 @@ public class SettingsActivity extends AppCompatActivity {
                         longtitudeValue = lngt;
                         isOk =true;
                     }
-
                 }
 
                 if (latitude.getText().toString().length() > 0) {
