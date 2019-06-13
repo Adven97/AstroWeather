@@ -24,16 +24,17 @@ public class InfoSet {
   //  public static double latitudeValue;
     public double refreshTimeValue= 10.0;
 
-    static Calendar cal = AstroActivity.cal;
+   // static Calendar cal = AstroActivity.cal;
 
-    public static InfoSet get() {
+    public static InfoSet get(Calendar cal) {
         if (sTasksSet == null || SettingsActivity.currentLat != SettingsActivity.latitudeValue || SettingsActivity.currentLomg != SettingsActivity.longtitudeValue ) {
             sTasksSet = new InfoSet(SettingsActivity.latitudeValue,SettingsActivity.longtitudeValue,cal);
         }
-        if(AstroActivity.timesUp){
-            cal = AstroActivity.cal;
-            sTasksSet = new InfoSet(SettingsActivity.latitudeValue,SettingsActivity.longtitudeValue,cal);
-        }
+        return sTasksSet;
+    }
+
+    public static InfoSet update(Calendar cal){
+        sTasksSet = new InfoSet(SettingsActivity.latitudeValue,SettingsActivity.longtitudeValue,cal);
         return sTasksSet;
     }
     //Date dt =timeNow;
@@ -42,7 +43,8 @@ public class InfoSet {
     private InfoSet(double lat, double longti, Calendar cal) {
 
 
-
+    Calendar cal2 = Calendar.getInstance(TimeZone.getTimeZone("Europe/Paris"));
+    //cal++;
         AstroDateTime dateTime = new AstroDateTime(cal.get(Calendar.YEAR),cal.get(Calendar.MONTH)+1,cal.get(Calendar.DAY_OF_MONTH),cal.get(Calendar.HOUR_OF_DAY),cal.get(Calendar.MINUTE),cal.get(Calendar.SECOND),2,false);
         //AstroDateTime dateTime = new AstroDateTime(2019,6,8,20,7,1,2,false);
         AstroCalculator.Location location = new AstroCalculator.Location(lat,longti);

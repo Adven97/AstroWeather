@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static com.example.astroweather.MainActivity.isTablet;
+
 public class SettingsActivity extends AppCompatActivity {
 
     public static double longtitudeValue=19.457503;
@@ -58,14 +60,19 @@ public class SettingsActivity extends AppCompatActivity {
                         latitudeValue = lat;
                         isOk =true;
                     }
-
                 }
+
 
                 if (refresh.getText().toString().length() > 0) {
                     refreshTimeValue = Double.parseDouble(refresh.getText().toString());
                 }
                 if(isOk){
-                    startActivity(new Intent(getApplicationContext(), AstroActivity.class));
+                    if(isTablet(getApplicationContext())){
+                        startActivity(new Intent(getApplicationContext(), AstroActivityTablet.class));
+                    }
+                    else {
+                        startActivity(new Intent(getApplicationContext(), AstroActivity.class));
+                    }
                 }
 
             }

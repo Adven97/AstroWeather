@@ -17,10 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".AstroActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden" >
-
-        </activity>
+        <activity android:name=".AstroActivity"></activity>
+        <activity android:name=".AstroActivityTablet"></activity>
     </application>
 
 </manifest>

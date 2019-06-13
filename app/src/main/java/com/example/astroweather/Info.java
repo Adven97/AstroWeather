@@ -14,7 +14,7 @@ public class Info implements Serializable {
     private String faza;
 
 
-    private String sunRise;
+    private String sunRise="xd";
     private String sunSet;
     private String twilight;
     private String down;

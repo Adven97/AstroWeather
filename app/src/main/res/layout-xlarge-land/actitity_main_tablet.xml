@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="AstroActivityTablet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="30sp"
+            android:id="@+id/maintime2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:layout_weight="1"
+            android:text="Czas : " />
+        <TextView
+            android:textSize="30sp"
+            android:id="@+id/pos2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Czas : "
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="640sp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/moon_fragmentt"
+            android:layout_width="500sp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="100sp"
+            android:orientation="horizontal"
+            android:id="@+id/sun_fragmentt"
+            android:layout_width="500sp"
+            android:layout_height="match_parent"
+            ></LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="300sp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="260dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="vertical">-->
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="260sp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/sun" />
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="260sp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:src="@drawable/sun" />-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
+
 
     <LinearLayout
         android:layout_marginTop="50sp"
         android:layout_marginLeft="30sp"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="130dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:id="@+id/sunrise"
                 android:layout_width="match_parent"
@@ -42,9 +44,10 @@
                 android:text="Wschód"
                 android:layout_weight="1"/>
             <TextView
+                android:textSize="24sp"
                 android:id="@+id/sunrise_value"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
                 android:text="Treść"
                 android:layout_weight="1"/>
 
@@ -55,15 +58,16 @@
         android:layout_marginLeft="30sp"
         android:layout_marginTop="50sp"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="130dp"
         android:layout_weight="1"
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:id="@+id/sunset"
                 android:layout_width="match_parent"
@@ -71,9 +75,10 @@
                 android:text="Zachód"
                 android:layout_weight="1"/>
             <TextView
+                android:textSize="24sp"
                 android:id="@+id/sunset_value"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
                 android:text="Treść"
                 android:layout_weight="1"/>
 
@@ -93,6 +98,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:id="@+id/twilight"
                 android:layout_width="match_parent"
@@ -100,6 +106,7 @@
                 android:text="Zmierzch"
                 android:layout_weight="1"/>
             <TextView
+                android:textSize="24sp"
                 android:id="@+id/twilight_value"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -122,6 +129,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:id="@+id/down"
                 android:layout_width="match_parent"
@@ -129,6 +137,7 @@
                 android:text="Świt cywilny"
                 android:layout_weight="1"/>
             <TextView
+                android:textSize="24sp"
                 android:id="@+id/down_value"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
