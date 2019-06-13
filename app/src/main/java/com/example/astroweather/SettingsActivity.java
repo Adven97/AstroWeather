@@ -14,7 +14,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     public static double longtitudeValue=19.457503;
     public static double latitudeValue = 51.788974;
-    public static double refreshTimeValue=15;
+    public static double refreshTimeValue=1;
     public static double currentLomg = longtitudeValue;
     public static double currentLat = latitudeValue;
 

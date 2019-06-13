@@ -41,6 +41,7 @@ public class AstroActivityTablet extends FragmentActivity {
 
     InfoSet tasksSet;
     Info info;
+    double ref;
 
     private ArrayList<Info> tasks;
 
@@ -48,12 +49,16 @@ public class AstroActivityTablet extends FragmentActivity {
     private Fragment myFragment;
     private Fragment mySecondFragment;
     Thread tMyLoc;
+    boolean allowed;
+
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
 
         outState.putInt("counter", counter);
         outState.putBoolean("timeup", timesUp);
+        outState.putBoolean("allowed", allowed);
+        outState.putDouble("val",ref);
         super.onSaveInstanceState(outState);
     }
 
@@ -61,6 +66,9 @@ public class AstroActivityTablet extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.actitity_main_tablet);
+
+        allowed=true;
+        ref = refreshTimeValue;
 
         info = new Info();
         dateTime = findViewById(R.id.maintime2);
@@ -92,15 +100,21 @@ public class AstroActivityTablet extends FragmentActivity {
         if(savedInstanceState !=null){
             counter =savedInstanceState.getInt("counter");
             timesUp = savedInstanceState.getBoolean("timeup");
+            ref = savedInstanceState.getDouble("val");
+            allowed = savedInstanceState.getBoolean("allowed");
+            allowed=false;
         }
 //
-        Timer refresh = new Timer();
-        TimerTask timerTaskObj = new TimerTask() {
-            public void run() {
-                tasksSet = InfoSet.update(cal);
-            }
-        };
-        refresh.schedule(timerTaskObj, 0, (int)(60000*refreshTimeValue));
+        if(allowed){
+            Timer refresh = new Timer();
+            TimerTask timerTaskObj = new TimerTask() {
+                public void run() {
+                    tasksSet = InfoSet.update(cal);
+                }
+            };
+            refresh.schedule(timerTaskObj, 0, (int)(60000*ref));
+        }
+
 //
 //
         tMyLoc = new Thread(){

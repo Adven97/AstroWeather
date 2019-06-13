@@ -89,15 +89,20 @@ public class AstroActivity extends AppCompatActivity {
             counter =savedInstanceState.getInt("counter");
             timesUp = savedInstanceState.getBoolean("timeup");
             ref = savedInstanceState.getDouble("val");
+            allowed = savedInstanceState.getBoolean("allowed");
+            allowed=false;
         }
 
-        Timer refresh = new Timer();
-        timerTaskObj = new TimerTask() {
+        if(allowed){
+            Timer refresh = new Timer();
+            timerTaskObj = new TimerTask() {
                 public void run() {
                     tasksSet = InfoSet.update(cal);
                 }
             };
             refresh.schedule(timerTaskObj, 0, (int) (60000 * ref));
+        }
+
 
 
 
