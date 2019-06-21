@@ -20,22 +20,33 @@
     <Button
         android:id="@+id/start"
         android:layout_width="match_parent"
-        android:layout_height="110sp"
+        android:layout_height="100sp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="200sp"
+        android:layout_marginTop="190sp"
         android:textSize="32dp"
-        android:text="Start app" />
+        android:text="Start astro" />
+
+    <Button
+        android:id="@+id/startWeather"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="290sp"
+        android:textSize="32dp"
+        android:text="Start weather" />
 
     <Button
         android:id="@+id/settings"
         android:layout_width="match_parent"
-        android:layout_height="110sp"
+        android:layout_height="100sp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="360sp"
+        android:layout_marginTop="390sp"
         android:textSize="32dp"
         android:text="settings" />
 

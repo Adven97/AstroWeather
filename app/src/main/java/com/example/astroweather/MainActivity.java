@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button start;
     Button settings;
+    Button startWeather;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         start = findViewById(R.id.start);
         settings = findViewById(R.id.settings);
+        startWeather = findViewById(R.id.startWeather);
 
         start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -55,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        startWeather.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), WeatherActivity.class));
+
+            }
+        });
 
     }
 
