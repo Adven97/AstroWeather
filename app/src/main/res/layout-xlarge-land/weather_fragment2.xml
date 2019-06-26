@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     >
 
+
+
     <LinearLayout
-        android:layout_marginTop="20sp"
-        android:layout_marginLeft="12sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="30sp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="110dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="vertical">
             <TextView
+                android:textSize="31dp"
                 android:textStyle="bold"
                 android:id="@+id/wiatrSila"
                 android:layout_width="match_parent"
@@ -28,57 +30,30 @@
                 android:text="Siła wiatru"
                 android:layout_weight="1"/>
             <TextView
+                android:textSize="31dp"
                 android:id="@+id/wiatrSila_value"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginLeft="20sp"
                 android:text="Treść"
                 android:layout_weight="1"/>
 
         </LinearLayout>
     </LinearLayout>
 
-    <!--<LinearLayout-->
-        <!--android:layout_marginLeft="12sp"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:orientation="horizontal">-->
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:orientation="horizontal">-->
-            <!--<TextView-->
-                <!--android:textStyle="bold"-->
-                <!--android:id="@+id/wiatrStopien"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:text="Stopień wiatru"-->
-                <!--android:layout_weight="1"/>-->
-            <!--<TextView-->
-                <!--android:id="@+id/wiatrStopien_value"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:layout_marginLeft="20sp"-->
-                <!--android:text="Treść"-->
-                <!--android:layout_weight="1"/>-->
-
-        <!--</LinearLayout>-->
-    <!--</LinearLayout>-->
-
     <LinearLayout
-        android:layout_marginLeft="12sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="10sp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="110dp"
         android:layout_weight="1"
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="vertical">
             <TextView
+                android:textSize="31dp"
                 android:textStyle="bold"
                 android:id="@+id/zachm"
                 android:layout_width="match_parent"
@@ -86,10 +61,10 @@
                 android:text="Zachmurzenie"
                 android:layout_weight="1"/>
             <TextView
+                android:textSize="31dp"
                 android:id="@+id/zachm_value"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginLeft="20sp"
                 android:text="Treść"
                 android:layout_weight="1"/>
 
@@ -97,17 +72,18 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="10sp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="12sp"
+        android:layout_height="110dp"
         android:layout_weight="1"
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_height="110dp"
+            android:orientation="vertical">
             <TextView
+                android:textSize="31dp"
                 android:textStyle="bold"
                 android:id="@+id/wilgotnosc"
                 android:layout_width="match_parent"
@@ -115,13 +91,12 @@
                 android:text="Wilgotność"
                 android:layout_weight="1"/>
             <TextView
+                android:textSize="31dp"
                 android:id="@+id/wilgotnosc_value"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginLeft="20sp"
                 android:text="Treść"
                 android:layout_weight="1"/>
-
 
         </LinearLayout>
     </LinearLayout>
@@ -129,14 +104,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="200dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageViewPogoda2"
             android:layout_width="match_parent"
-            android:layout_height="260sp"
+            android:layout_height="200sp"
             android:layout_weight="1"
             app:srcCompat="@drawable/sadf"  />
 

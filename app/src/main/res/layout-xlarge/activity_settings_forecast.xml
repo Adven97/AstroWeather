@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_marginTop="100sp"
+        android:layout_marginLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="35sp"
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Podaj miasto"
+                android:layout_weight="1"/>
+            <EditText
+                android:id="@+id/giveCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:inputType="text" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="35dp"
+                android:id="@+id/jedn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Wybór jednostki"
+                android:layout_weight="1"/>
+            <Spinner
+                android:textSize="33dp"
+                android:id="@+id/jedn_spinner"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content" />
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button
+                android:textSize="27sp"
+                android:background="@color/colorPrimaryDark"
+                android:id="@+id/savebutt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save changes"
+                android:height="70sp"
+                android:width="420sp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -11,84 +11,90 @@
         android:layout_marginTop="20sp"
         android:layout_marginLeft="12sp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="120dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:orientation="horizontal">
             <TextView
+                android:textSize="33dp"
                 android:textStyle="bold"
-                android:id="@+id/wiatrSila"
+                android:id="@+id/miasto"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="Siła wiatru"
+                android:layout_height="50dp"
+                android:text="Miasto"
                 android:layout_weight="1"/>
             <TextView
-                android:id="@+id/wiatrSila_value"
+                android:textSize="33dp"
+                android:id="@+id/miasto_value"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="20sp"
                 android:text="Treść"
                 android:layout_weight="1"/>
 
         </LinearLayout>
     </LinearLayout>
-
-    <!--<LinearLayout-->
-        <!--android:layout_marginLeft="12sp"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:orientation="horizontal">-->
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:orientation="horizontal">-->
-            <!--<TextView-->
-                <!--android:textStyle="bold"-->
-                <!--android:id="@+id/wiatrStopien"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:text="Stopień wiatru"-->
-                <!--android:layout_weight="1"/>-->
-            <!--<TextView-->
-                <!--android:id="@+id/wiatrStopien_value"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:layout_marginLeft="20sp"-->
-                <!--android:text="Treść"-->
-                <!--android:layout_weight="1"/>-->
-
-        <!--</LinearLayout>-->
-    <!--</LinearLayout>-->
 
     <LinearLayout
         android:layout_marginLeft="12sp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="120dp"
         android:layout_weight="1"
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:orientation="horizontal">
             <TextView
+                android:textSize="33dp"
                 android:textStyle="bold"
-                android:id="@+id/zachm"
+                android:id="@+id/temperatura"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="Zachmurzenie"
+                android:layout_height="50dp"
+                android:text="Temperatura"
                 android:layout_weight="1"/>
             <TextView
-                android:id="@+id/zachm_value"
+                android:textSize="33dp"
+                android:id="@+id/temperatura_value"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20sp"
+                android:text="Treść"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="33dp"
+                android:textStyle="bold"
+                android:id="@+id/cis"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Ciśnienie"
+                android:layout_weight="1"/>
+            <TextView
+                android:textSize="33dp"
+                android:id="@+id/cis_value"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginLeft="20sp"
                 android:text="Treść"
                 android:layout_weight="1"/>
@@ -98,28 +104,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="120dp"
         android:layout_marginLeft="12sp"
         android:layout_weight="1"
         android:orientation="horizontal">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="120dp"
             android:layout_weight="1"
             android:orientation="horizontal">
             <TextView
-                android:textStyle="bold"
-                android:id="@+id/wilgotnosc"
+                android:textSize="33dp"
+                android:id="@+id/opis"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:text="Wilgotność"
-                android:layout_weight="1"/>
-            <TextView
-                android:id="@+id/wilgotnosc_value"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_marginLeft="20sp"
-                android:text="Treść"
+                android:layout_height="50dp"
+                android:text="Opis:"
                 android:layout_weight="1"/>
 
 
@@ -129,14 +128,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="290dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageViewPogoda2"
+            android:id="@+id/imageViewPogoda1"
             android:layout_width="match_parent"
-            android:layout_height="260sp"
+            android:layout_height="290sp"
             android:layout_weight="1"
             app:srcCompat="@drawable/sadf"  />
 

@@ -127,5 +127,16 @@ public class WeatherInfo implements Serializable {
     public void setZachm(int title) {
         zachm = title;
     }
+
+
+    public String icon;
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String title) {
+        icon = title;
+    }
 }
 

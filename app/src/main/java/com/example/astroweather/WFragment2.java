@@ -9,16 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Date;
 
 public class WFragment2 extends Fragment {
 
-    public static TextView windDeg;
     public static TextView windStr;
     public static TextView wilgotnosc;
     public static TextView zachm;
+    public static ImageView pogoda2;
 
     WeatherInfo info;
 
@@ -70,20 +71,19 @@ public class WFragment2 extends Fragment {
 
         View view = inflater.inflate(R.layout.weather_fragment2, container, false);
 
-        windDeg = view.findViewById(R.id.wiatrStopien_value);
         windStr = view.findViewById(R.id.wiatrSila_value);
         wilgotnosc = view.findViewById(R.id.wilgotnosc_value);
         zachm = view.findViewById(R.id.zachm_value);
-
+        pogoda2 = (ImageView) view.findViewById(R.id.imageViewPogoda2);
 
         Bundle bundle=getArguments();
         if(bundle !=null){
             info = (WeatherInfo)bundle.getSerializable("SomeTask");
 
-            windStr.setText(info.getWindSpeed()+"");
-            windDeg.setText(info.getWindDeg()+"");
-            wilgotnosc.setText(info.getWilgotnosc()+"");
-            zachm.setText(info.getZachm()+"");
+//            windStr.setText(info.getWindSpeed()+"");
+//       //     windDeg.setText(info.getWindDeg()+"");
+//            wilgotnosc.setText(info.getWilgotnosc()+"");
+//            zachm.setText(info.getZachm()+"");
 
         }
 

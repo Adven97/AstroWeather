@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsForecastActivity"></activity>
+        <activity android:name=".ForecastActivity"></activity>
         <activity android:name=".AstroActivity"></activity>
         <activity android:name=".WeatherActivity"></activity>
         <activity android:name=".AstroActivityTablet"></activity>

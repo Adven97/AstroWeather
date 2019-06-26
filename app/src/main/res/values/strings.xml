@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AstroWeather</string>
+
+    <string-array name="jednostki">
+        <item>Celsjusz</item>
+        <item>Kelvin</item>
+        <item>Farenheit</item>
+    </string-array>
 </resources>

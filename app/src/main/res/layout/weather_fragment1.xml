@@ -126,11 +126,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageViewPogoda"
+            android:id="@+id/imageViewPogoda1"
             android:layout_width="match_parent"
             android:layout_height="260sp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/moonxd" />
+            app:srcCompat="@drawable/sadf" />
 
     </LinearLayout>
 
